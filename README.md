@@ -8,7 +8,7 @@ A starter template for terraform projects with GitHub Actions CI orientated work
 - fill out the new project details
 - git clone your new GitHub project
 - cd to the project's directory
-- TODO: terraform setup
+- add your terraform scripts to the project
 - update this `README.md` to reflect your own project's awesomeness!
 
 ## Why
