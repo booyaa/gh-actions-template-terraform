@@ -1,5 +1,5 @@
 on: pull_request
-name: Terraform
+name: CI
 jobs:
   filter-to-pr-open-synced:
     runs-on: ubuntu-latest
