@@ -29,8 +29,8 @@ Setting up continuous integration pipeline for your projects can be tricky, but 
 
 ## Changelog
 
-2020-04-26 - Update to reflect change in GitHub Action usage
-2019-09-28 - Initial release
+- 2020-04-26 - Update to reflect change in GitHub Action usage
+- 2019-09-28 - Initial release
 
 ## License
 
