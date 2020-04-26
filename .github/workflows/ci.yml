@@ -1,33 +1,29 @@
-on:
-  pull_request:
-    branches:
-    - master
+name: 'Terraform checks'
 
-name: CI
+on:
+  - pull_request
 jobs:
-  filter-to-pr-open-synced:
+  terraform:
+    name: 'terraform'
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: filter-to-pr-open-synced
-      uses: actions/bin/filter@master
-      with:
-        args: action 'opened|synchronize'
-    - name: terraform-fmt
+    - name: 'checkout'
+      uses: actions/checkout@master
+    - name: format
       uses: hashicorp/terraform-github-actions@master
       with:
         tf_actions_version: 0.12.24
         tf_actions_subcommand: 'fmt'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: terraform-init
+    - name: init
       uses: hashicorp/terraform-github-actions@master
       with:
         tf_actions_version: 0.12.24
         tf_actions_subcommand: 'init'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: terraform-validate
+    - name: validate
       uses: hashicorp/terraform-github-actions@master
       with:
         tf_actions_version: 0.12.24
