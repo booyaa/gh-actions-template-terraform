@@ -27,6 +27,11 @@ Setting up continuous integration pipeline for your projects can be tricky, but 
 
 - A Continuous Delivery (CD) pipeline to run the `plan` and `apply` commands. These commands will require additional configuration (cloud vendor secrets) to work and have no place in a template.
 
+## Changelog
+
+2020-04-26 - Update to reflect change in GitHub Action usage
+2019-09-28 - Initial release
+
 ## License
 
 See [LICENSE](LICENSE).
